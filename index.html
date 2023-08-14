@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="./index.js" defer></script>
+  <title>Form Validation</title>
+</head>
+
+<body>
+  <form id="createAccountForm" class="form">
+    <!-- Phone Number -->
+    <div class="flex-column">
+      <label for="phoneNumber">Phone Number:</label>
+      <input id="phoneNumberInput" name="phoneNumber" type="text" required>
+      <p id="phoneNumberErrorMessage" class="error-message">Invalid phone number</p>
+    </div>
+    <!-- Password -->
+    <div class="flex-column">
+      <label for="password">Password:</label>
+      <input id="passwordInput" name="password" type="password" required>
+      <p id="passwordErrorMessage" class="error-message">Weak Password!</p>
+    </div>
+    <!-- The Form Submit Button -->
+    <button id="submitButton" type="submit" class="submit-button">Submit</button>
+  </form>
+</body>
+
+</html>
