@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="style.css">
   <script src="./index.js" defer></script>
   <title>Form Validation</title>
+  <style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -14,13 +20,13 @@
     <!-- Phone Number -->
     <div class="flex-column">
       <label for="phoneNumber">Phone Number:</label>
-      <input id="phoneNumberInput" name="phoneNumber" type="text" required>
-      <p id="phoneNumberErrorMessage" class="error-message">Invalid phone number</p>
+      <input id="phoneNumberInput" name="phoneNumber" type="number" required class="border-gray-300">
+      <p id="phoneNumberErrorMessage" class="error-message">Invalid phone number!</p>
     </div>
     <!-- Password -->
     <div class="flex-column">
       <label for="password">Password:</label>
-      <input id="passwordInput" name="password" type="password" required>
+      <input id="passwordInput" name="password" type="password" required class="border-gray-300">
       <p id="passwordErrorMessage" class="error-message">Weak Password!</p>
     </div>
     <!-- The Form Submit Button -->

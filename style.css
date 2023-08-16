@@ -22,8 +22,15 @@ label {
 
 input {
   border-radius: 6px;
-  border: 2px solid gray;
   padding-block: 0.5rem; /* py-2 */
+}
+
+.border-gray-300 {
+  border: 2px solid gray;
+}
+
+.border-red-300 {
+  border: 2px solid red;
 }
 
 .submit-button {
@@ -37,4 +44,10 @@ input {
   color: white;
   outline: none;
   border: none;
+}
+
+.red-box {
+  background: red;
+  margin-top: 1rem;
+  position: relative;
 }

@@ -16,12 +16,25 @@ createAccountForm.addEventListener('submit', function (event) {
 // manage form data
 let formData = {};
 
-PhoneNumberInput.addEventListener('input', function () {
+PhoneNumberInput.addEventListener('change', function () {
   let inputValue = PhoneNumberInput.value;
-  let isNotNumber = isNaN(Number(inputValue));
-  if (isNotNumber) {
-    alert('Non Numbers not Allowed!');
-    PhoneNumberInput.value = '';
+  // 3. should be numbers
+  // 0704353301, +256754599523 (13), 256754599523 (12), 1234567890
+  // 1. phone should not be less than 10 digits but also not greater than 13
+  // if (inputValue.length >= 10 && inputValue.length <= 12) {
+  phoneErrorMessage.style.display = 'none';
+  PhoneNumberInput.classList.add('border-gray-300');
+  PhoneNumberInput.classList.remove('border-red-300');
+
+  if (inputValue.startsWith('07') && inputValue.length === 10) {
+    // console.log('valid number');
+  } else {
+    if (inputValue.startsWith('256') && inputValue.length === 12) {
+      // console.log('valid number');
+    } else {
+      PhoneNumberInput.classList.remove('border-gray-300');
+      PhoneNumberInput.classList.add('border-red-300');
+      phoneErrorMessage.style.display = 'flex';
+    }
   }
-  console.log(inputValue);
 });
